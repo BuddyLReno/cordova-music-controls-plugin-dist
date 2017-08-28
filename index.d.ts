@@ -8,6 +8,10 @@ export interface MusicControlsOptions {
     dismissable: boolean;
     hasPrev: boolean;
     hasNext: boolean;
+    hasSkipForward: boolean;
+    hasSkipBackward: boolean;
+    skipForwardInterval: number;
+    skipBackwardInterval: number;
     hasClose: boolean;
     album: string;
     duration: number;
@@ -42,6 +46,10 @@ export interface MusicControlsOptions {
  *   hasPrev   : false,      // show previous button, optional, default: true
  *   hasNext   : false,      // show next button, optional, default: true
  *   hasClose  : true,       // show close button, optional, default: false
+ *   hasSkipForward : true, //optional, default: false. true value overrides hasNext.
+ *   hasSkipBackward : true, //optional, default: false. true value overrides hasPrev.
+ *   skipForwardInterval : 15, //optional. default: 0.
+ *   skipBackwardInterval : 15, //optional. default: 0. 
  *
  * // iOS only, optional
  *   album       : 'Absolution'     // optional, default: ''
